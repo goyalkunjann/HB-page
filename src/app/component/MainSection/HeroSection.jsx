@@ -29,7 +29,7 @@ export const HeroSection = ( {bannerimage, altText} ) => {
   return (
    <>
     <div className=" w-full relative">
-        <img src={bannerimage} alt={altText} className=' w-full h-[600px] object-cover object-bottom '/>
+        <img src={bannerimage} alt={altText} className=' w-full h-[600px] object-cover object-bottom hidden'/>
       {/* <span onClick={() => window.open('https://api.whatsapp.com/send?phone=15551234567', '_blank')} className={`${style} top-[118px] `}>  <Image src={whatsappicon} alt='whatsapp' className=' w-[30px] '/></span>
       <span onClick={openLink.bind('tel:+91 9810431883')} className={` ${style} top-[180px] `}>  <Image src={phoneNoicon} alt='contact' className=' w-[21px] '/></span>
         */}
