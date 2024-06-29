@@ -22,7 +22,10 @@ export default function Home() {
        <div id="packages">
          <Packages />
        </div>
+       <div className="mt-10">
        <GlimpseSection />
+       </div>
+       
        
        
        <TableSection />
