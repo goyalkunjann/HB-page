@@ -1,10 +1,10 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import focusIcon from '../../../../../public/assets/images/focus.png';
 import buildingIcon from '../../../../../public/assets/images/building1.png';
 import apartmentIcon from '../../../../../public/assets/images/apartment.png';
 import bedroomIcon from '../../../../../public/assets/images/bedroom1.png';
-
 
 const triangleIcon = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +13,6 @@ const triangleIcon = (
     <path d="M7 22L22 7" stroke="black" strokeWidth="2"/>
   </svg>
 );
-
 
 const rupeeCircleIcon = (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,13 +67,13 @@ const IconsList = ({ icons }) => (
 
 export const Floor = () => {
   return (
-    <div className="p-6 ml-14 mr-14">
+    <div className="p-4 lg:p-6 mx-4 lg:mx-14">
       <h2 className="text-left text-2xl font-semibold mb-6">Our Floor Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {[1, 2, 3, 4].map((index) => (
           <div key={index} className="bg-[#FAF7F6] p-4 rounded-lg flex flex-col justify-between">
             <BoxContent imageSrc="/assets/images/image1.png" altText={`Image ${index}`} />
-            <div className="flex justify-between mt-4">
+            <div className="flex flex-col lg:flex-row justify-between mt-4">
               <IconsList icons={iconsGroup1} />
               <IconsList icons={iconsGroup2} />
             </div>

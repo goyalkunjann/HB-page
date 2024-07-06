@@ -14,7 +14,7 @@ const service = () => {
             <CraftSection />
             <Journey />
             <Faqs />
-            <HeroSection />
+         
         </div>
     );
 }

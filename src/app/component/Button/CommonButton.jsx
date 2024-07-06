@@ -1,17 +1,11 @@
 'use client'
-import React from 'react'
+import React from 'react';
 
-export const CommonButton = ({ children, onclick = () => {} }) => {
-  const handleClick = () => {
-    if (onclick) {
-      onclick();
-    }
-  };
-  
+export const CommonButton = ({ children, onClick = () => {} }) => {
   return (
     <button
-      className='rounded-lg shadow-md py-[20px] px-[50px] text-white bg-[#A46254] text-[24px] leading-[10px] w-fit mb-[10px]'
-      onClick={handleClick}
+      className='rounded-lg shadow-md py-1 lg:py-3 px-3 lg:px-6 text-sm lg:text-lg text-white bg-[#A46254] leading-tight hover:bg-[#93503e]'
+      onClick={onClick}
     >
       {children}
     </button>

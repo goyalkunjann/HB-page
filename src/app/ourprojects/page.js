@@ -11,9 +11,11 @@ const howitwork = () => {
     return (
         <div className='bg-white'>
             <House />
+            <div className='mt-6 '>
             <Projects/>
-            <Projects1 />
-            <Projects1 />
+            </div>
+            
+            
         </div>
     );
 }

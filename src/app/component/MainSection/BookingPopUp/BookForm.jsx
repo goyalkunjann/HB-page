@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../../../store/slice/slice";
@@ -55,13 +55,13 @@ export const BookForm = () => {
   };
 
   return (
-    <section className="relative lg:w-[450px] w-full h-auto bg-white lg:rounded-[20px] rounded-none flex flex-col shadow-md mt-[20px] lg:mt-0 m-[10px] p-[20px] border-[0.5px] z-10">
-      <div className="flex flex-col items-center mt-[8px]">
-        <Image src={logo} alt="Company Logo" width={140} height={140} />
-        <CommonHeading className={"text-[25px] font-extrabold"}>
+    <section className="relative w-full lg:max-w-[450px] h-auto bg-white lg:rounded-[20px] flex flex-col shadow-md my-4 mx-auto mr-8 p-6 border">
+      <div className="flex flex-col items-center">
+        <Image src={logo} alt="Company Logo" width={100} height={100} />
+        <CommonHeading className="text-xl font-bold">
           Book your appointment
         </CommonHeading>
-        <SubHeading className={"text-center text-[#6C757D] mt-[10px]"}>
+        <SubHeading className="text-center text-gray-600 mt-2">
           Get free consultation
         </SubHeading>
 
@@ -72,9 +72,9 @@ export const BookForm = () => {
           <div className="text-red-500 text-center mb-4">{errorMessage}</div>
         )}
 
-        <form className="flex flex-col items-center gap-[10px] mt-[58px]" onSubmit={handleSubmit}>
+        <form className="flex flex-col items-center gap-4 mt-6 w-full" onSubmit={handleSubmit}>
           <CustomField
-            labelTitle="name"
+            labelTitle="Name"
             FieldType="text"
             placeholder="Name"
             name="name"
@@ -82,7 +82,7 @@ export const BookForm = () => {
             onChange={handleChange}
           />
           <CustomField
-            labelTitle="phoneNo"
+            labelTitle="Phone Number"
             FieldType="text"
             placeholder="Phone Number"
             name="phoneNo"
@@ -90,7 +90,7 @@ export const BookForm = () => {
             onChange={handleChange}
           />
           <CustomField
-            labelTitle="location"
+            labelTitle="Location"
             FieldType="text"
             placeholder="Location of your Plot"
             name="location"
@@ -98,7 +98,7 @@ export const BookForm = () => {
             onChange={handleChange}
           />
           <CustomField
-            labelTitle="area"
+            labelTitle="Area"
             FieldType="number"
             placeholder="Area"
             name="area"
@@ -106,7 +106,7 @@ export const BookForm = () => {
             onChange={handleChange}
           />
           <CustomField
-            labelTitle="services"
+            labelTitle="Services"
             FieldType="text"
             placeholder="Services "
             name="services"

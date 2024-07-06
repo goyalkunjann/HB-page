@@ -26,11 +26,11 @@ export const OfferTwo = () => {
   ];
 
   return (
-    <div className="bg-white p-6 ml-14 mr-14">
+    <div className="bg-white p-4 lg:p-6 mx-4 lg:mx-14">
       <CommonHeading className="text-left ml-2 mb-6">
         What we offer
       </CommonHeading>
-      <div className="grid grid-cols-3 gap-4 mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
         {data.map((item, index) => (
           <div
             key={index}
@@ -39,11 +39,10 @@ export const OfferTwo = () => {
             <Image
               src={item.icon}
               alt={item.subHeading}
-              className="h-[300px] rounded-t-lg object-cover"
+              className="h-[200px] sm:h-[300px] rounded-t-lg object-cover"
             />
-            <div className="border-t-2  bg-white p-4 flex flex-col items-center gap-2 rounded-b-lg">
-              
-              <p className="text-[#575757] text-lg font-semibold">
+            <div className="border-t-2 bg-white p-4 flex flex-col items-center gap-2 rounded-b-lg">
+              <p className="text-[#575757] text-base sm:text-lg font-semibold">
                 {item.title}
               </p>
               <p className="text-center text-sm">

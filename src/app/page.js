@@ -17,24 +17,17 @@ export default function Home() {
        <HeroSection/>
        <ConstructionSection />
        <InteriorSection  />
-       <Services />
+       <Services  />
        
-       <div id="packages">
-         <Packages />
-       </div>
-       <div className="mt-10">
+       <Packages />
        <GlimpseSection />
-       </div>
-       
-       
        
        <TableSection />
 
-       <div id="ourprojects">
          <Projects />
-       </div>
+   
      
-       <Faqs />
+       <Faqs  />
        <CollabsSection />
     </main>
   );

@@ -12,7 +12,7 @@ const howitwork = () => {
             <Steps />
             <ShowCase />
             <Faqs />
-            <HeroSection/>
+           
         </div>
     );
 }

@@ -4,9 +4,9 @@ import Image from 'next/image';
 import backgroundImage from '/public/assets/images/front4.png';
 import { CommonButton } from '../../Button/CommonButton';
 
-const House = () => {
+const House5 = () => {
   return (
-    <div className="relative flex items-center justify-center w-full h-[500px]">
+    <div className="relative flex items-center justify-center w-full h-[400px] lg:h-[600px]">
       <Image 
         src={backgroundImage} 
         alt="Background Image" 
@@ -14,12 +14,12 @@ const House = () => {
         style={{ objectFit: 'cover', objectPosition: 'bottom' }}
         className="w-full h-full"
       />
-      <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="absolute text-center p-4">
-        <h1 className="text-white text-2xl font-bold text-center">Blog Page</h1>
+        <h1 className="text-white text-2xl font-bold text-center md:text-4xl">Blog Page</h1>
       </div>
     </div>
   );
 };
 
-export default House;
+export default House5;

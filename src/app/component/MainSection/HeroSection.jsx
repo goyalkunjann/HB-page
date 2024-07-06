@@ -1,49 +1,32 @@
-'use client'
-import React from 'react'
-import { HeroSectionContent } from './HeroSectionContent'
-import Image from 'next/image'
-import whatsappicon from "../../../../public/assets/images/whatsapp.svg"
-import phoneNoicon from "../../../../public/assets/images/phone.svg"
-import messageicon from "../../../../public/assets/images/message.svg"
-import { useDispatch } from 'react-redux'
-import { toggleModal } from '../../store/slice/slice'
-import { SCREENS } from '../Utils/CustomModal/Modal'
+'use client';
+import React from 'react';
+import { HeroSectionContent } from './HeroSectionContent';
+import { BookForm } from './BookingPopUp/BookForm';
+import Image from 'next/image';
+import whatsappicon from "../../../../public/assets/images/whatsapp.svg";
+import phoneNoicon from "../../../../public/assets/images/phone.svg";
 
-export const HeroSection = ( {bannerimage, altText} ) => {
-  const dispatch = useDispatch();
-  const style = ' cursor-pointer inline  z-[20] fixed  right-0 overflow-hidden  bg-white px-[10px] py-[7px]  rounded-l-[6px] shadow-xl flex items-center  w-[44px] h-[44px]'
-
-  const handleButton = () => {
-    dispatch(
-      toggleModal({
-        screen: SCREENS.LEAD_POPUP,
-        visible: true,
-      })
-    );
-  }
-
-  function openLink (){
-    window.location.href = this
-  }
-
+export const HeroSection = ({ altText }) => {
   return (
-   <>
-    <div className=" w-full relative">
-        <img src={bannerimage} alt={altText} className=' w-full h-[600px] object-cover object-bottom hidden'/>
-      {/* <span onClick={() => window.open('https://api.whatsapp.com/send?phone=15551234567', '_blank')} className={`${style} top-[118px] `}>  <Image src={whatsappicon} alt='whatsapp' className=' w-[30px] '/></span>
-      <span onClick={openLink.bind('tel:+91 9810431883')} className={` ${style} top-[180px] `}>  <Image src={phoneNoicon} alt='contact' className=' w-[21px] '/></span>
-        */}
-
-<a href="https://api.whatsapp.com/send?phone=15551234567" target="_blank" rel="noopener noreferrer" className={`${style} top-[118px]`}>
-  <Image src={whatsappicon} alt='whatsapp' className='w-[30px]' />
-</a>
-<a href="tel:+919810431883" className={`${style} top-[180px]`}>
-  <Image src={phoneNoicon} alt='contact' className='w-[21px]' />
-</a>
-
-      {/* <Image src={messageicon} alt='message'  onClick={handleButton}  className=' cursor-pointer absolute right-[20px] bottom-[30px] w-[50px] h-[50px]'></Image> */}
+    <div className="relative w-full">
+      <img src="/assets/images/bannerimage.jpeg" alt={altText} className='w-full h-[600px] lg:h-[700px] object-cover object-bottom'/>
+      <a href="https://api.whatsapp.com/send?phone=15551234567" target="_blank" rel="noopener noreferrer" className="cursor-pointer inline z-[20] fixed right-0 overflow-hidden bg-white px-[10px] py-[7px] rounded-l-[6px] shadow-xl flex items-center w-[44px] h-[44px] top-[118px]">
+        <Image src={whatsappicon} alt='whatsapp' className='w-[30px]' />
+      </a>
+      <a href="tel:+919810431883" className="cursor-pointer inline z-[20] fixed right-0 overflow-hidden bg-white px-[10px] py-[7px] rounded-l-[6px] shadow-xl flex items-center w-[44px] h-[44px] top-[180px]">
+        <Image src={phoneNoicon} alt='contact' className='w-[21px]' />
+      </a>
+      <div className="absolute inset-0 flex flex-col lg:flex-row items-center justify-center w-full h-full px-4 lg:px-16">
         <HeroSectionContent />
-   </div>
-   </>
-  )
+        <div className="w-full lg:w-1/3 px-4 lg:px-0 lg:absolute lg:right-0">
+          {/* Ensuring BookForm appears below the background image on mobile */}
+          <div className="mt-[-600px] lg:mt-0">
+            <BookForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default HeroSection;

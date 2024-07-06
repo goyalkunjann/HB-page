@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { CommonHeading } from '../../Heading/CommonHeading';
 
@@ -36,7 +37,7 @@ export const Journey = () => {
   ];
 
   return (
-    <div className="p-6 mx-14 flex flex-wrap">
+    <div className="p-4 lg:p-6 mx-4 lg:mx-14 flex flex-wrap">
       <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
         <CommonHeading>Your journey is a snapshot</CommonHeading>
         <div className="flex flex-col items-start relative mt-10">
@@ -65,7 +66,7 @@ export const Journey = () => {
       </div>
       <div className="w-full lg:w-1/2 pl-0 lg:pl-12">
         <div className="flex flex-col items-start">
-          <h1 className='text-[32px] mb-8 mt-16'>Booking</h1>
+          <h1 className='text-[24px] lg:text-[32px] mb-4 lg:mb-8 mt-8 lg:mt-16'>Booking</h1>
           {formSteps.map((step, index) => (
             <div key={index} className="flex items-start mb-4 relative">
               <div className="flex items-center">

@@ -1,9 +1,11 @@
-import React from 'react'
-import { CommonHeading } from '../../Heading/CommonHeading'
-import { Accordion } from '../../Utils/Accordion/Accordion'
+// src/app/components/MainSection/FAQs/Faqs.jsx
+
+import React from 'react';
+import { CommonHeading } from '../../Heading/CommonHeading';
+import { Accordion } from '../../Utils/Accordion/Accordion';
 
 export const Faqs = () => {
-    const data =[
+    const data = [
         {
             question: 'What services do you offer?',
             answer: 'We offer comprehensive services in both construction and interior design. This includes end-to-end solutions from conceptual design to construction, along with customized interior design services for residential and commercial spaces.'
@@ -32,11 +34,14 @@ export const Faqs = () => {
             question: 'What sets your company apart from others?',
             answer: 'Our dedication to sustainability and luxury, coupled with an unyielding commitment to client satisfaction, sets us apart. We leverage the latest technologies and innovative materials to deliver exceptional quality and design.'
         },
-    ]
-  return (
-    <section className=' w-full h-auto bg-[#FAF7F6] p-[30px]' id='faqs'>
-        <CommonHeading className={'text-center'}>Frequently asked questions</CommonHeading>
-        <Accordion data={data}/>
-    </section>
-  )
-}
+    ];
+
+    return (
+        <section className='w-full h-auto bg-[#FAF7F6] p-[30px]' id='faqs'>
+            <CommonHeading className={'text-center'}>Frequently asked questions</CommonHeading>
+            <Accordion data={data} />
+        </section>
+    );
+};
+
+export default Faqs;

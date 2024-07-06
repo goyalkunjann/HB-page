@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import craft1 from "../../../../../public/assets/images/craft1.png";
@@ -19,32 +20,16 @@ export const CraftSection = () => {
   ];
 
   return (
-    <div className="bg-white p-6 ml-14 mr-14">
+    <div className="bg-white p-4 lg:p-6 mx-4 lg:mx-14">
       <CommonHeading className="text-left ml-2 mb-6">
         What goes into crafting the best
       </CommonHeading>
-      <div className="grid grid-cols-3 gap-4">
-        {images.slice(0, 3).map((img, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {images.map((img, index) => (
           <div key={index} className="relative">
             <Image
               src={img.src}
               alt={`Image ${index + 1}`}
-              className="w-full h-48 object-cover rounded-lg"
-            />
-            <div className="absolute inset-0 flex items-end bg-black bg-opacity-50 rounded-lg p-4">
-              <p className="text-white text-sm font-semibold mb-2 ml-2">
-                {img.text}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-3 gap-4 mt-4">
-        {images.slice(3).map((img, index) => (
-          <div key={index} className="relative">
-            <Image
-              src={img.src}
-              alt={`Image ${index + 4}`}
               className="w-full h-48 object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-end bg-black bg-opacity-50 rounded-lg p-4">

@@ -30,12 +30,12 @@ export const Projects = () => {
 
   return (
     <div className="lg:max-w-[1290px] w-full mx-auto h-full lg:px-[18px] mt-[60px] mb-[40px]">
-     
+      <CommonHeading className="text-center">Our Projects</CommonHeading>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
         {data.map((item, index) => (
           <div
             key={index}
-            className="group bg-brown rounded-lg overflow-hidden  border border-#575757 rounded-[5px]"
+            className="group bg-brown rounded-lg overflow-hidden border border-#575757 rounded-[5px]"
           >
             <div className="relative w-full h-[300px]">
               <Image
@@ -91,7 +91,7 @@ export const Projects = () => {
                     <Image
                       src={SquareIcon}
                       alt="Square"
-                      width={24}    
+                      width={24}
                       height={24}
                       className="mb-1 filter invert group-hover:invert-0 transition duration-300 ease-in-out"
                     />
@@ -108,6 +108,8 @@ export const Projects = () => {
           </div>
         ))}
       </div>
+      {/* Add margin or padding to create space below the Projects section */}
+      <div className="mt-8"></div>
     </div>
   );
 };
