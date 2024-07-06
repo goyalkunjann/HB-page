@@ -10,10 +10,10 @@ export const HeroSection = ({ altText }) => {
   return (
     <div className="relative w-full">
       <img src="/assets/images/bannerimage.jpeg" alt={altText} className='w-full h-[600px] lg:h-[700px] object-cover object-bottom'/>
-      <a href="https://api.whatsapp.com/send?phone=15551234567" target="_blank" rel="noopener noreferrer" className="cursor-pointer inline z-[20] fixed right-0 overflow-hidden bg-white px-[10px] py-[7px] rounded-l-[6px] shadow-xl flex items-center w-[44px] h-[44px] top-[118px]">
+      <a href="https://api.whatsapp.com/send?phone=9810117643" target="_blank" rel="noopener noreferrer" className="cursor-pointer inline z-[20] fixed right-0 overflow-hidden bg-white px-[10px] py-[7px] rounded-l-[6px] shadow-xl flex items-center w-[44px] h-[44px] top-[118px]">
         <Image src={whatsappicon} alt='whatsapp' className='w-[30px]' />
       </a>
-      <a href="tel:+919810431883" className="cursor-pointer inline z-[20] fixed right-0 overflow-hidden bg-white px-[10px] py-[7px] rounded-l-[6px] shadow-xl flex items-center w-[44px] h-[44px] top-[180px]">
+      <a href="tel:+919810232124" className="cursor-pointer inline z-[20] fixed right-0 overflow-hidden bg-white px-[10px] py-[7px] rounded-l-[6px] shadow-xl flex items-center w-[44px] h-[44px] top-[180px]">
         <Image src={phoneNoicon} alt='contact' className='w-[21px]' />
       </a>
       <div className="absolute inset-0 flex flex-col lg:flex-row items-center justify-center w-full h-full px-4 lg:px-16">
